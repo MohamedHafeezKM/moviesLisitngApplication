@@ -1,0 +1,81 @@
+1) to register users
+url:localhost/api/register/
+method:post
+data:[username,password,email]
+authorization:nill
+
+
+
+2) to obtain auth token
+
+url:localhost/api/token/
+method:post
+data:[username,password]
+authorization:nill
+
+3) to list all movies
+
+url:localhost:8000/api/movies/
+method:get
+data:nill
+authorization:nill
+
+4) to retrieve a movie
+
+url:localhost/api/movies/{id}/
+method:get
+data:nill
+authorization:nill
+
+5) Add to Favorites
+
+url:localhost/api/movies/{id}/add_to_favorites/
+method:put
+data:nill
+authorization:token
+
+6) Remove from Favorites in movie page
+
+url:localhost/api/movies/{id}/remove_from_favorites_moviepage/
+method:put
+data:nill
+authorization:token
+
+
+7) Remove from Favorites
+hint:movie id is passed here
+url:localhost:8000/api/favorites/{id}/remove_from_favorites/
+method:put
+data:nill
+authorization:token
+
+
+
+
+7)To view User's Favorites list
+
+url:localhost:8000/api/favorites/
+method:get
+data:nill
+authorization:token
+
+
+8) To add a review to the movie
+url:localhost:8000/api/movies/{id}/add_review/
+method:post
+data:comment,rating
+authorization:token
+
+
+9)Update a review
+url:localhost:8000/api/reviews/{id}/
+method:put
+data:comment,rating
+authorization:token
+
+10)Delete a review
+
+url:localhost:8000/api/reviews/{id}/
+method:delete
+data:nill
+authorization:token
